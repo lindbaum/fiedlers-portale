@@ -1,0 +1,13 @@
+# ignore Eclipse files and folders
+/.settings
+/.project
+/.buildpath
+# ignore PHPStorm files and folders
+.idea
+.editorconfig
+# ignore phpstorm files
+/.idea
+
+# ignore system files
+.qnap
+.DS_Store

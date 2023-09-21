@@ -1,0 +1,99 @@
+.label {
+       font:12px "Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+       color:black;  
+}
+
+.text_field {
+       width:200px;  
+       padding:5px;
+       margin-right:5px;
+       font-size:12px;  
+       line-height:20px;  
+       border:1px solid grey;  
+       -webkit-border-radius: 5px;  
+       -moz-border-radius: 5px;  
+       border-radius: 5px;  
+       background:white;  
+       background-image: -webkit-gradient(  
+              linear,  
+              left bottombottom,  
+              left top,  
+              color-stop(0.33, rgb(240,240,240)),  
+              color-stop(1, rgb(255,255,255))  
+       );  
+       background-image: -moz-linear-gradient(  
+              center bottombottom,  
+              rgb(240,240,240) 33%,  
+              rgb(255,255,255) 100%  
+       );  
+}
+
+.text_field:focus {  
+       box-shadow:0px 0px 4px #2f2f2f;
+}
+
+.select_field {
+       padding:5px;
+       margin-right:5px;
+       font-size:12px;  
+       line-height:20px;  
+       border:1px solid grey;  
+       -webkit-border-radius: 5px;  
+       -moz-border-radius: 5px;  
+       border-radius: 5px;  
+       width:212px;  
+}
+
+.select_field:focus {  
+       box-shadow:0px 0px 4px #2f2f2f;  
+}
+
+.textarea {
+    width:390px;  
+    min-height:300px;  
+    padding:5px;  
+    font-size:12px;  
+    line-height:20px;  
+    border:1px solid grey;  
+    -webkit-border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    border-radius: 5px;  
+    background:#469DFA;  
+    background-image: -webkit-gradient(  
+           linear,  
+           left bottombottom,  
+           left top,  
+           color-stop(0.33, rgb(240,240,240)),  
+           color-stop(1, rgb(255,255,255))  
+    );  
+    background-image: -moz-linear-gradient(  
+           center bottombottom,  
+           rgb(240,240,240) 33%,  
+           rgb(255,255,255) 100%  
+    );  
+}
+
+.textarea:focus {  
+    box-shadow:0px 0px 4px #2f2f2f;  
+}  
+
+.button_container {
+    margin-top:1em;
+}
+
+.submit_btn, .link {
+    font-size:12px;
+    line-height:15px;  
+    border:1px solid #777;
+    -webkit-border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    border-radius: 5px; 
+    padding:5px;
+    cursor:pointer;  
+    background:#EEE;
+    color:#777;  
+}
+
+.link {
+    text-decoration:none;
+}

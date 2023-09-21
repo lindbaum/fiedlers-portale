@@ -1,0 +1,259 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:arial, verdana, sans-serif;
+    font-size:0.8em;
+}
+
+
+#login {
+    position: absolute;
+    width: 340px;
+    height: 260px;
+    top: 30%;
+    left: 50%;
+    margin-top: -130px;
+    margin-left: -170px;
+}
+
+.loginError {
+    margin-top:10px;
+    background:red;
+    color:white;
+    padding:12px;
+}
+ 
+#wrap {
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:10px;
+}
+
+#header {
+    width:auto;
+    background-color:#eee;
+    margin-bottom:2em;
+    padding:12px;
+    border:1px solid #ccc;
+}
+ 
+#sidebar {
+    width:15em;
+    float:left;
+    margin-bottom:2em;
+}
+ 
+#content {
+    margin-left:15em;
+}
+
+.contentBox, .contentBoxRed {
+    width:auto;
+    min-height:20px;
+    margin-bottom:2em;
+    padding:0.8em;
+    background:white;
+    border:1px solid #ccc;
+}
+ 
+.contentBoxRed {
+    background:red;
+    color:white;
+}
+ 
+#footer {
+    clear:left;
+    min-height:30px;
+    padding:12px;
+    margin-bottom:10px;
+    background-color:#ddd;
+    margin-top:2em;
+    color:#888;
+    border:1px solid #ccc;
+}
+
+.date-tccontainer {
+    width: 180px;
+    font-size: 12px;
+    height:18px;
+    color: #000;
+    border:1px solid grey;  
+    -webkit-border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    border-radius: 5px;  
+    background:white;
+    padding: 5px;
+    float: left;
+    margin-right: 5px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#tcbtn_date1 {
+    margin-right: 10px;
+}
+
+/* TABLE TABLE */
+
+table,td
+{
+    border              : 1px solid #CCC;
+    border-collapse     : collapse;
+    font                : small "Tahoma", "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+}
+
+table
+{
+    border              :none;
+    border              :1px solid #CCC;
+}
+
+table tr {
+    height:40px;
+}
+
+thead th,
+tbody th
+{
+    background          : #FFF url(../images/th_bck.gif) repeat-x;
+    color               : #666;  
+    padding             : 5px 10px;
+    border-left         : 1px solid #CCC;
+    text-align          : left;
+}
+
+thead th a {
+    text-decoration     : none;
+    color               : #888;
+}
+
+tbody th
+{
+    background          : #fafafb;
+    border-top          : 1px solid #CCC;
+    text-align          : left;
+    font-weight         : normal;
+}
+
+tbody tr td
+{
+    padding             : 5px 10px;
+    color               : #666;
+}
+
+tbody td a {
+    text-decoration     : underline;
+    color               : #888;
+}
+
+tbody td a:hover {
+    text-decoration     : underline;
+    color               : #444;
+}
+
+tbody tr:hover
+{
+    background          : #FFF url(../images/tr_bck.gif) repeat;
+}
+
+tbody tr:hover td
+{
+    color               : #454545;
+}
+
+tfoot td,
+tfoot th
+{
+    border-left         : none;
+    border-top          : 1px solid #CCC;
+    padding             : 10px;
+    background          : #FFF url(../images/foot_bck.gif) repeat;
+    color               : #666;
+}
+
+caption
+{
+    text-align          : left;
+    font-size           : 120%;
+    padding             : 10px 0;
+    color               : #666;
+}
+
+tbody td.fold, tbody tr:hover td.fold {
+    color:silver;
+}
+
+/* LISTE LISTE */
+
+
+ul {
+    width:170px;
+    height:auto;
+    font:13px Arial, Helvetica, sans-serif;
+    border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;
+    box-shadow:0px 0px 2px #979797; -moz-box-shadow:0px 0px 2px #979797; -webkit-box-shadow:0px 0px 2px #979797;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+ul:hover {height:auto;}
+ul a {
+    color:#333333;
+    text-decoration:none;
+    display:block;
+    line-height:22px;
+    padding:0 0 0 12px;
+}
+ul a:hover {font-weight:bold;}
+ul li {
+    width:100%;
+    display:block;
+    border-bottom:1px dotted #bfbfbf;
+
+}
+ul li:first-of-type {
+    border-bottom:1px solid #cccccc;
+    background:#eee;
+    height:auto;
+    vertical-align:middle;
+    padding:13px;}
+ul li:last-of-type {border:none;}
+
+
+/* TOOL TIP */
+
+a.info
+{
+position:relative;
+z-index:1;
+color:#2D006B;
+text-decoration:none;
+}
+
+a.info:hover
+{
+z-index:2;
+}
+
+a.info span
+{
+display: none;
+}
+
+a.info:hover span
+{
+display:block;
+position:absolute;
+top:2em;
+left:2em;
+width:15em;
+border:1px solid #12127D;
+background-color:#eee;
+color:#555;
+text-align: center;
+padding: 5px;
+font-size: 0.8em;
+} 
