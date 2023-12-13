@@ -106,8 +106,20 @@ function activate() {
                 <td class="headline">Ihre Kontaktdaten</td>
             </tr>
             <tr>
-                <td class="fliesstext">Bitte geben Sie nun Ihre vollst&auml;ndigen Kontaktdaten ein und w&auml;hlen Sie einen Wunschversandtag f&uuml;r Ihr Pr&auml;sent aus.
-                <br />Best&auml;tigen Sie anschliessend mit <i>Abschicken</i>, um die Gutscheineinl&ouml;sung abzuschliessen.</td>
+                <td class="fliesstext">Bitte geben Sie nun Ihre vollst&auml;ndigen Kontaktdaten ein und w&auml;hlen Sie
+                    einen Wunschversandtag f&uuml;r Ihr Pr&auml;sent aus.
+                    <br/>Best&auml;tigen Sie anschliessend mit <i>Abschicken</i>, um die Gutscheineinl&ouml;sung
+                    abzuschliessen.
+                    <p>&nbsp;</p>
+                    <p><strong>* Der Versand erfolgt nur innerhalb Deutschland. Ein Versand in andere Länder kann nicht
+                            vorgenommen werden! Der Versand erfolgt an dem von Ihnen ausgewählten Versandtag per DPD
+                            Express. Die Ware wird in der Regel 1-2 Tage später bei Ihnen eintreffen.<br><br>
+
+                            * Shipping only takes place within Germany. Shipping to other countries cannot be carried out!<br><br>
+
+                            Shipping takes place on the shipping day you selected via DPD Express. The goods will usually
+                            arrive 1-2 days later.</strong></p>
+                </td>
             </tr>
             
             <?php
@@ -171,7 +183,7 @@ function activate() {
                 
                 <tr>
                     <th scope="col">Land</th>
-                    <td><input type="text" name="land" class="text_field" placeholder="Land" value="<?php if(isset($land)) echo $land; else echo 'Deutschland'; ?>" required="required" /></td>
+                    <td><input type="text" name="land" class="text_field" placeholder="Land" value="Deutschland" autocomplete="0" required="required" readonly disabled style="font-weight: bold; color: #999" /></td>
                 </tr>
                 
                 <tr>

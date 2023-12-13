@@ -1,22 +1,22 @@
 <?php
 /**
- *    Autor        : RenŽ Kaminsky
+ *    Autor        : Renï¿½ Kaminsky
  *    Copyright    : (c) 2011 by media senses / brandcode
  */
-define(SECURE, true);
+define('SECURE', true);
 //require_once('includes/dbconfig.php');
 session_start();
 
 if (isset($_POST['nummer']) && trim($_POST['nummer']) != '' && isset($_POST['code']) && trim($_POST['code']) != '') {
     
-    sleep(4); // Script verzšgern...
+    sleep(4); // Script verzï¿½gern...
     
     $error = preg_match('/^([0-9]{5,6})$/', $_POST['nummer']) ? '' : '<br />Bitte geben Sie eine korrekte Gutscheinnummer ein.';
     $error .= preg_match('/^([A-Z0-9]{12})$/', $_POST['code']) ? '' : '<br />Bitte geben Sie einen korrekten Code ein.';
     
     $heute = mktime(0,0,0, date('m'), date('d'), date('Y'));
     
-    if($error == '') { // Gutschein auf GŸltigkeit prŸfen
+    if($error == '') { // Gutschein auf Gï¿½ltigkeit prï¿½fen
         
         $nummer = $_POST['nummer'];
         $code = $_POST['code'];
@@ -32,21 +32,21 @@ if (isset($_POST['nummer']) && trim($_POST['nummer']) != '' && isset($_POST['cod
         if($kommando->num_rows() == 1) {
             while($kommando->fetch()) {
                 if($enddatum != '') { // Gutschein mit Begrenzung
-                    if($heute <= $enddatum && $status == 0) { // Gutschein gŸltig... Weiterleiten
+                    if($heute <= $enddatum && $status == 0) { // Gutschein gï¿½ltig... Weiterleiten
                         $_SESSION['nummer'] = $nummer;
                         $_SESSION['code'] = $code;
                         header('Location: get_user_data.php');
                         exit;
-                    } else { // Gutschein abgelaufen oder bereits eingelšst!
+                    } else { // Gutschein abgelaufen oder bereits eingelï¿½st!
                         $message = '<br />Der von Ihnen eingegebene Gutschein ist nicht mehr g&uuml;ltig!';
                     }
                 } else { // Gutschein ohne Begrenzung
-                    if($status == 0) { // Gutschein noch nicht eingelšst... Weiterleiten
+                    if($status == 0) { // Gutschein noch nicht eingelï¿½st... Weiterleiten
                         $_SESSION['nummer'] = $nummer;
                         $_SESSION['code'] = $code;
                         header('Location: get_user_data.php');
                         exit;
-                    } else { // Gutschein wurde bereits eingelšst
+                    } else { // Gutschein wurde bereits eingelï¿½st
                         $message = '<br />Der von Ihnen eingegebene Gutschein ist nicht mehr g&uuml;ltig!';
                     }
                 }

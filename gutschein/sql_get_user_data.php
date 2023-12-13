@@ -1,12 +1,12 @@
 <?php
 /**
- *    Autor        : RenŽ Kaminsky
+ *    Autor        : Renï¿½ Kaminsky
  *    Copyright    : (c) 2011 by media senses / brandcode
  */
 session_start();
-if (isset($_SESSION['nummer']) && isset($_SESSION['code'])) define(SECURE, true);
+if (isset($_SESSION['nummer']) && isset($_SESSION['code'])) define('SECURE', true);
 //defined('SECURE') or die('Keine Zugriffsberechtigung!');
-define(SECURE, true);
+define('SECURE', true);
 //require_once('includes/dbconfig.php');
 define("L_LANG", "de_DE"); // Kalender-Sprache (DE)
 
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])) {
     $anrede = $_POST['anrede'];
     $gsnummer = $_SESSION['nummer'];
     
-    if(empty($error)) { // Daten sind korrekt und kšnnen gespeichert werden...
+    if(empty($error)) { // Daten sind korrekt und kï¿½nnen gespeichert werden...
         
         $heute = mktime(0,0,0, date('m'), date('d'), date('Y'));
         $flag = 1;
@@ -158,10 +158,10 @@ if(isset($_POST['submit'])) {
                     //instantiate class and set properties
                     $myCalendar = new tc_calendar("date3", true, false);
                     $myCalendar->setIcon("calendar/images/iconCalendar.gif");
-                    $myCalendar->setDate(date("d"), date("m"), date("Y")); // der nŠchstmšgliche Tag!
+                    $myCalendar->setDate(date("d"), date("m"), date("Y")); // der nï¿½chstmï¿½gliche Tag!
                     $myCalendar->setPath("calendar/");
                     $myCalendar->setYearInterval(date("Y"), 2015);
-                    $myCalendar->dateAllow("2011-09-30", "2015-01-01"); // bis 10.00 gleicher Tag, dann nŠchster Tag!
+                    $myCalendar->dateAllow("2011-09-30", "2015-01-01"); // bis 10.00 gleicher Tag, dann nï¿½chster Tag!
                     $myCalendar->disabledDay("Sun");
                     $myCalendar->disabledDay("Sat");
                     $myCalendar->disabledDay("Fri");

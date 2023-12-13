@@ -17,7 +17,7 @@ $config['db_username'] = 'root';           //Benutzername
 $config['db_password'] = '';               //Kennwort
 $config['db_database'] = 'fiedler_gsv2';   //Datenbank
 */
-if ($_SERVER['SERVER_NAME'] === 'fiedlers-fischmarkt.test') {
+if ($_SERVER['SERVER_NAME'] === 'portale.fiedlers-fischmarkt.test') {
     $config['db_hostname'] = 'localhost';//MySQL-Server
     $config['db_username'] = 'lindbaum';//Benutzername
     $config['db_password'] = 'lindbaum123'; //Kennwort
