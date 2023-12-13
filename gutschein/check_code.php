@@ -23,7 +23,7 @@ if (isset($_POST['nummer']) && trim($_POST['nummer']) != '' && isset($_POST['cod
 		//$code = str_replace("O", "Q", $code);
 		//$code = str_replace("0", "Q", $code);
         
-        $sql = "SELECT end_datum, ist_eingeloest FROM gsv_gutschein WHERE gutschein_nummer=? AND gen_code=? AND ist_ausgegeben=0";
+        $sql = "SELECT end_datum, ist_eingeloest FROM gsv_gutschein WHERE gutschein_nummer=? AND gen_code=?";
         
         $kommando = $db->prepare($sql);
         $kommando->bind_param('is', $nummer, $code);
