@@ -3,13 +3,13 @@
  *    Autor        : Ren� Kaminsky
  *    Copyright    : (c) 2011 by media senses / brandcode
  */
-define(SECURE, true);
+define('SECURE', true);
 require_once('includes/dbconfig.php');
 session_start();
 
 if (isset($_POST['nummer']) && trim($_POST['nummer']) != '' && isset($_POST['code']) && trim($_POST['code']) != '') {
     
-    sleep(3); // Script verz�gern...
+    sleep(3); // Script verzögern...
     
     $error = preg_match('/^([0-9]{5,6})$/', $_POST['nummer']) ? '' : '<br />Bitte geben Sie eine korrekte Gutschein-Nr. ein.';
     $error .= preg_match('/^([A-Z0-9]{12})$/', $_POST['code']) ? '' : '<br />Bitte geben Sie einen korrekten Code ein.';
@@ -23,14 +23,14 @@ if (isset($_POST['nummer']) && trim($_POST['nummer']) != '' && isset($_POST['cod
 		//$code = str_replace("O", "Q", $code);
 		//$code = str_replace("0", "Q", $code);
         
-        $sql = "SELECT end_datum, ist_eingeloest FROM gsv_gutschein WHERE gutschein_nummer=? AND gen_code=? AND ist_ausgegeben=1";
+        $sql = "SELECT end_datum, ist_eingeloest FROM gsv_gutschein WHERE gutschein_nummer=? AND gen_code=? AND ist_ausgegeben=0";
         
         $kommando = $db->prepare($sql);
         $kommando->bind_param('is', $nummer, $code);
         $kommando->execute();
         $kommando->store_result();
         $kommando->bind_result($enddatum, $status);
-        
+
         if($kommando->num_rows() == 1) {
             while($kommando->fetch()) {
                 if($enddatum != '') { // Gutschein mit Begrenzung
@@ -109,8 +109,10 @@ function activate() {
             <td class="headline">Sie m&ouml;chten einen Gutschein einl&ouml;sen?</td>
         </tr>
         <tr>
-            <td class="fliesstext"><p>Machen Sie bitte Ihr Rubbelfeld frei und folgen Sie den Anweisungen.<br />Achtung: Sobald das Rubbelfeld freigemacht wurde, entf&auml;llt die M&ouml;glichkeit den Gutschein per Post oder pers&ouml;nlich einzul&ouml;sen. Ihr Gutschein ist nur noch online einl&ouml;sbar.</p>
-            <p>&nbsp;</p>
+            <td class="fliesstext"><p>Machen Sie bitte Ihr Rubbelfeld frei und folgen Sie den Anweisungen.<br/>Achtung:
+                    Sobald das Rubbelfeld freigemacht wurde, entf&auml;llt die M&ouml;glichkeit den Gutschein per Post
+                    oder pers&ouml;nlich einzul&ouml;sen. Ihr Gutschein ist nur noch online einl&ouml;sbar.</p>
+                <p>&nbsp;</p>
 <?php
 /*
             <p><strong><font color="#d60000">Liebe Kunden,
