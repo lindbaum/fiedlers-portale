@@ -7,7 +7,7 @@ session_start();
 if (isset($_SESSION['nummer']) && isset($_SESSION['code'])) define('SECURE', true);
 require_once('includes/dbconfig.php');
 define("L_LANG", "de_DE"); // Kalender-Sprache (DE)
-
+$land="Deutschland";
 if(isset($_POST['issent'])) {
     $error='';
     (isset($_POST['vorname']) && trim($_POST['vorname']) != '') ? $vorname = trim(htmlspecialchars($_POST['vorname'])) : $error .= '<br />Bitte einen Vornamen angeben.';
@@ -16,7 +16,6 @@ if(isset($_POST['issent'])) {
     (isset($_POST['hnr']) && trim($_POST['hnr']) != '') ? $hnr = trim(htmlspecialchars($_POST['hnr'])) : $error .= '<br />Bitte eine Hausnummer angeben.';
     (isset($_POST['plz']) && trim($_POST['plz']) != '') ? $plz = trim(htmlspecialchars($_POST['plz'])) : $error .= '<br />Bitte eine Postleitzahl angeben.';
     (isset($_POST['ort']) && trim($_POST['ort']) != '') ? $ort = trim(htmlspecialchars($_POST['ort'])) : $error .= '<br />Bitte einen Ort angeben.';
-    (isset($_POST['land']) && trim($_POST['land']) != '') ? $land = trim(htmlspecialchars($_POST['land'])) : $error .= '<br />Bitte ein Land angeben.';
     (isset($_POST['email']) && trim($_POST['email']) != '') ? $email = trim(htmlspecialchars($_POST['email'])) : $error .= '<br />Bitte eine Email angeben.';
     (isset($_POST['telefon']) && trim($_POST['telefon']) != '') ? $telefon = trim(htmlspecialchars($_POST['telefon'])) : $error .= '<br />Bitte ein Telefon angeben.';
     (isset($_POST['date3']) && trim($_POST['date3']) != '' && $_POST['date3'] != '0000-00-00') ? $versand = strtotime($_POST['date3']) : $error .= '<br />Bitte ein Versanddatum angeben.';
@@ -183,7 +182,7 @@ function activate() {
                 
                 <tr>
                     <th scope="col">Land</th>
-                    <td><input type="text" name="land" class="text_field" placeholder="Land" value="Deutschland" autocomplete="0" required="required" readonly disabled style="font-weight: bold; color: #999" /></td>
+                    <td><input type="text" name="land" class="text_field" placeholder="Land" value="<?php if(isset($land)) echo $land; ?>" autocomplete="0"  readonly disabled style="font-weight: bold; color: #999" /></td>
                 </tr>
                 
                 <tr>
