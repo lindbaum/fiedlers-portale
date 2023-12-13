@@ -291,12 +291,6 @@ function activate() {
                     ?>
                     </td>
                 </tr>
-		
-				<tr>
-                    <th scope="col" valign="top">Hinweis</th>
-                    <td>Der Versand erfolgt an dem von Ihnen ausgew&auml;hlten Versandtag per DHL. Das Pr&auml;sent wird in der Regel 1-2 Tage sp&auml;ter (nur innerhalb Deutschlands) bei Ihnen eintreffen.<br /><br />
-					Auslandsversand nur von Mo. - Mi.<br />Sollte ein anderer Tag ausgew&auml;hlt werden, wird der Versand von uns automatisch auf den n&auml;chsten m&ouml;glichen Versandtag ge&auml;ndert.</td>
-                </tr>
             </tbody>
             
             <tfoot>
